@@ -1,4 +1,7 @@
 # SnapFly Capture Support
 
-For support, questions, or bug reports, please contact:
-cem.kirac@gmail.com
+Official support and landing page for SnapFly Capture.
+
+Website: https://designerzeus.github.io/snapfly-capture-support/
+
+Support: cem.kirac@gmail.com
