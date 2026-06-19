@@ -1,7 +1,23 @@
-DrinkFly Support
+# DrinkFly Support
 
-Official support and landing page for DrinkFly.
+DrinkFly için resmi destek sayfası:
 
-Website: https://designerzeus.github.io/snapfly-capture-support/
+https://designerzeus.github.io/snapfly-capture-support/drinkfly/
 
-Support: cem.kirac@gmail.com
+Gizlilik politikası:
+
+https://designerzeus.github.io/snapfly-capture-support/drinkfly/privacy.html
+
+Destek e-postası: cem.kirac@gmail.com
+
+---
+
+Official DrinkFly support page:
+
+https://designerzeus.github.io/snapfly-capture-support/drinkfly/
+
+Privacy policy:
+
+https://designerzeus.github.io/snapfly-capture-support/drinkfly/privacy.html
+
+Support email: cem.kirac@gmail.com
