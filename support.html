@@ -11,6 +11,10 @@
     body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;letter-spacing:0}
     main{width:min(760px,calc(100% - 36px));margin:0 auto;padding:64px 0}
     header{margin-bottom:34px}
+    .header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+    .language-switcher{display:inline-flex;padding:3px;border:1px solid var(--line);border-radius:8px;background:var(--paper);flex:none}
+    .language-switcher button{min-width:46px;height:34px;padding:0 10px;border:0;border-radius:6px;background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+    .language-switcher button[aria-pressed="true"]{background:var(--accent);color:#fff}
     h1{font-size:42px;line-height:1.05;margin:0 0 12px}
     h2{font-size:21px;margin:0 0 10px}
     p,li{font-size:16px;line-height:1.55;color:var(--muted)}
@@ -19,24 +23,48 @@
     .button{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:700}
     .meta{font-size:14px}
     footer{padding-top:22px;color:var(--muted);font-size:14px}
+    [data-lang]{display:none}
+    html[lang="en"] [data-lang="en"],html[lang="tr"] [data-lang="tr"]{display:revert}
+    @media(max-width:560px){main{padding:36px 0}.header-row{display:block}.language-switcher{margin-bottom:24px}h1{font-size:36px}}
     @media(prefers-color-scheme:dark){:root{--bg:#17191b;--paper:#222529;--text:#f4f6f8;--muted:#b4bbc2;--line:#393e43;--accent:#62a9ff}}
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>SnapFly Capture Support</h1>
-      <p>Official help and contact information for SnapFly Capture on macOS.</p>
+      <div class="header-row">
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+        </div>
+        <div>
+          <div data-lang="en">
+            <h1>SnapFly Capture Support</h1>
+            <p>Official help and contact information for SnapFly Capture on macOS.</p>
+          </div>
+          <div data-lang="tr">
+            <h1>SnapFly Capture Destek</h1>
+            <p>macOS için SnapFly Capture resmi yardım ve iletişim sayfası.</p>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section>
+    <section data-lang="en">
       <h2>Contact Support</h2>
       <p>For questions, bug reports, purchase or restore issues, and feature feedback, email the developer directly.</p>
       <p><a class="button" href="mailto:cem.kirac@gmail.com?subject=SnapFly%20Capture%20Support">Email SnapFly Support</a></p>
       <p class="meta">Support email: <a href="mailto:cem.kirac@gmail.com">cem.kirac@gmail.com</a></p>
     </section>
 
-    <section>
+    <section data-lang="tr">
+      <h2>Destek ile İletişim</h2>
+      <p>Sorularınız, hata bildirimleri, satın alma veya geri yükleme sorunları ve özellik önerileriniz için geliştiriciye doğrudan e-posta gönderebilirsiniz.</p>
+      <p><a class="button" href="mailto:cem.kirac@gmail.com?subject=SnapFly%20Capture%20Destek">SnapFly Desteğe E-posta Gönder</a></p>
+      <p class="meta">Destek e-postası: <a href="mailto:cem.kirac@gmail.com">cem.kirac@gmail.com</a></p>
+    </section>
+
+    <section data-lang="en">
       <h2>What to Include</h2>
       <ul>
         <li>Your macOS version and Mac model.</li>
@@ -46,21 +74,70 @@
       </ul>
     </section>
 
-    <section>
+    <section data-lang="tr">
+      <h2>Mesajınıza Ekleyin</h2>
+      <ul>
+        <li>macOS sürümünüzü ve Mac modelinizi.</li>
+        <li>Ayarlar bölümünde görünen SnapFly Capture sürümünü.</li>
+        <li>Soruna yol açan adımları ve gerçekleşmesini beklediğiniz sonucu.</li>
+        <li>Uygunsa sorunun ekran görüntüsünü. Lütfen hassas bilgileri paylaşmayın.</li>
+      </ul>
+    </section>
+
+    <section data-lang="en">
       <h2>Common Help</h2>
       <p><strong>Screen capture permission:</strong> Open System Settings &gt; Privacy &amp; Security &gt; Screen &amp; System Audio Recording and allow SnapFly Capture.</p>
       <p><strong>Save folder access:</strong> Choose the image or video save folder in SnapFly Settings. macOS may ask you to confirm access to that folder.</p>
       <p><strong>Restore Pro:</strong> Open SnapFly Capture Pro and choose Restore Purchases while signed in with the Apple Account used for the purchase.</p>
     </section>
 
-    <section>
+    <section data-lang="tr">
+      <h2>Yaygın Konular</h2>
+      <p><strong>Ekran kaydı izni:</strong> Sistem Ayarları &gt; Gizlilik ve Güvenlik &gt; Ekran ve Sistem Sesi Kaydı bölümünü açın ve SnapFly Capture'a izin verin.</p>
+      <p><strong>Kayıt klasörü erişimi:</strong> SnapFly Ayarları'ndan görsel veya video kayıt klasörünü seçin. macOS bu klasöre erişimi onaylamanızı isteyebilir.</p>
+      <p><strong>Pro'yu geri yükleme:</strong> Satın almada kullandığınız Apple Hesabı ile giriş yapın, ardından SnapFly Capture Pro bölümünden Satın Alımları Geri Yükle seçeneğini kullanın.</p>
+    </section>
+
+    <section data-lang="en">
       <h2>Privacy</h2>
       <p>SnapFly Capture processes screenshots, recordings, OCR results, and history locally on your Mac. Support requests only include information you voluntarily send by email.</p>
     </section>
 
-    <footer>
+    <section data-lang="tr">
+      <h2>Gizlilik</h2>
+      <p>SnapFly Capture ekran görüntülerini, kayıtları, OCR sonuçlarını ve geçmişi yerel olarak Mac'inizde işler. Destek talepleri yalnızca e-posta ile kendi isteğinizle gönderdiğiniz bilgileri içerir.</p>
+    </section>
+
+    <footer data-lang="en">
       SnapFly Capture support · Developer: Cem Kıraç · Updated June 20, 2026
     </footer>
+    <footer data-lang="tr">
+      SnapFly Capture destek · Geliştirici: Cem Kıraç · Güncelleme: 20 Haziran 2026
+    </footer>
   </main>
+  <script>
+    const supportedLanguages = ["en", "tr"];
+    const savedLanguage = localStorage.getItem("snapfly-support-language");
+    const browserLanguage = navigator.language.toLowerCase().startsWith("tr") ? "tr" : "en";
+
+    function setLanguage(language) {
+      const selectedLanguage = supportedLanguages.includes(language) ? language : "en";
+      document.documentElement.lang = selectedLanguage;
+      document.title = selectedLanguage === "tr" ? "SnapFly Capture Destek" : "SnapFly Capture Support";
+      document.querySelector('meta[name="description"]').content = selectedLanguage === "tr"
+        ? "macOS için resmi SnapFly Capture destek sayfası."
+        : "Official support page for SnapFly Capture on macOS.";
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.setLang === selectedLanguage));
+      });
+      localStorage.setItem("snapfly-support-language", selectedLanguage);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    setLanguage(savedLanguage || browserLanguage);
+  </script>
 </body>
 </html>
