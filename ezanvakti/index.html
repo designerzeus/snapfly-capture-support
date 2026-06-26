@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezan Vakti Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #000;
+            color: #f5f5f7;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .container { max-width: 640px; width: 100%; }
+        .icon {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #86868b;
+            font-size: 15px;
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #14a999;
+        }
+        p, li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d1d1d6;
+            margin-bottom: 12px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 28px;
+        }
+        ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        ul li::before {
+            content: "•";
+            color: #14a999;
+            position: absolute;
+            left: 0;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #1c1c1e;
+            margin: 32px 0;
+        }
+        a {
+            color: #14a999;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        .contact {
+            text-align: center;
+            margin: 32px 0;
+        }
+        .contact a {
+            display: inline-block;
+            background: #1c1c1e;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #14a999;
+            transition: background 0.2s;
+        }
+        .contact a:hover {
+            background: #2c2c2e;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            color: #48484a;
+            font-size: 13px;
+            margin-top: 48px;
+        }
+        .privacy-link {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🕌</div>
+        <h1>Ezan Vakti</h1>
+        <p class="subtitle">Namaz vakitlerini takip edin, kıble yönünü bulun. / Track prayer times, find Qibla direction.</p>
+
+        <hr class="divider">
+
+        <h2>Türkçe</h2>
+        <p>Ezan Vakti uygulaması ile ilgili destek talepleri, hata bildirimleri ve öneriler için bize ulaşabilirsin.</p>
+        <ul>
+            <li>Uygulama, bulunduğunuz şehre göre namaz vakitlerini Diyanet verileriyle gösterir.</li>
+            <li>KKTC ve Türkiye şehirleri desteklenir, şehir seçebilir veya otomatik konum algılayabilirsiniz.</li>
+            <li>Kıble pusulası ile kıble yönünü kolayca bulabilirsiniz.</li>
+            <li>Tesbih sayacı ile dijikır takibi yapabilirsiniz (33'lü döngü, sıfırlama).</li>
+            <li>Dini günler ve mübarek geceler Diyanet'ten çekilir.</li>
+            <li>Günün ayeti her gün güncellenir.</li>
+            <li>Tüm veriler cihazınızda yerel olarak saklanır.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>English</h2>
+        <p>Contact us for Ezan Vakti support requests, bug reports, or suggestions.</p>
+        <ul>
+            <li>The app displays prayer times based on your city using Diyanet data.</li>
+            <li>Both TRNC and Turkey cities are supported. You can select a city or use auto location detection.</li>
+            <li>Use the Qibla compass to easily find the direction of Qibla.</li>
+            <li>Track your dhikr with the Tasbih counter (33-count loop, reset).</li>
+            <li>Religious days and holy nights are fetched from Diyanet.</li>
+            <li>Daily verse updates every day.</li>
+            <li>All data is stored locally on your device.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <div class="contact">
+            <a href="mailto:cem.kirac@gmail.com">Contact / İletişim</a>
+        </div>
+
+        <a href="./privacy.html" class="privacy-link">Privacy Policy / Gizlilik Politikası</a>
+
+        <footer>
+            Copyright &copy; 2026 Cem Kıraç &middot; Ezan Vakti
+        </footer>
+    </div>
+</body>
+</html>
